@@ -35,3 +35,4 @@ via Discord: **Jax#1090**
 
 ## Special thanks to
 [@khanhas](https://github.com/khanhas) for the MagickMeter plugin
+[Jelle Dekkers](https://sites.google.com/view/jelledekkers/google-weather-jd-edition) for weather icons and parser
