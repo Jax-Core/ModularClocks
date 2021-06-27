@@ -2,15 +2,15 @@
 @includeV=#@#Vars.inc
 @includeVer=#@#Version.inc
 SetTP=20
-SetW=800
-SetH=400
+SetW=(1200*#SCREENAREAWIDTH#/1920)
+SetH=(700*#SCREENAREAWIDTH#/1920)
 SetL=200
 R=20
 SetSH=(#SetH#+#SetTP#*2)
 
 [mL]
 Measure=Calc
-onupdateaction=[!FadeDuration 500][!KeepOnScreen 0]
+onupdateaction=[!FadeDuration 500][!KeepOnScreen 0][!Delay 100][!EnableMeasureGroup NUOL]
 
 
 
@@ -48,7 +48,7 @@ Shape2=Ellipse ([##CURRENTSECTION#] = 1 ? 40 : 10),10,5,5 | StrokeWidth 0 | Fill
 DynamicVariables=1
 Fill=Fill Color ([##CURRENTSECTION#] = 1 ? 35 : 181),([##CURRENTSECTION#] = 1 ? 209 : 181),([##CURRENTSECTION#] = 1 ? 96 : 181)
 Container=ContentContainer
-Leftmouseupaction=[!WriteKeyvalue Variables "#CURRENTSECTION#" "([##CURRENTSECTION#] = 1 ? 0 : 1)" "#@#Vars.inc"][!Refresh]
+Leftmouseupaction=[!WriteKeyvalue Variables "#CURRENTSECTION#" "([##CURRENTSECTION#] = 1 ? 0 : 1)" "#@#Vars.inc"][!Refresh][!Delay 1000][!Refresh "ModularClocks\Clock"]
 
 [ShowInToolbar]
 Measure=Plugin
@@ -139,6 +139,12 @@ MouseLeaveAction=[!SetOption #CURRENTSECTION# Fill "Fill Color 255,255,255,(#Bar
 ; Fill=Fill Color 255,255,255,(#BarHandler# = 5 ? 220 : 0)
 ; MouseOverAction=[!SetOption #CURRENTSECTION# Fill "Fill Color 255,255,255,(#BarHandler# = 5 ? 220 : 100)"][!UpdateMeter #CURRENTSECTION#][!Redraw]
 ; MouseLeaveAction=[!SetOption #CURRENTSECTION# Fill "Fill Color 255,255,255,(#BarHandler# = 5 ? 220 : 0)"][!UpdateMeter #CURRENTSECTION#][!Redraw]
+[Render]
+Meter=Shape
+MeterStyle=PageBox
+Fill=Fill Color 255,255,255,(#BarHandler# = 6 ? 220 : 0)
+MouseOverAction=[!SetOption #CURRENTSECTION# Fill "Fill Color 255,255,255,(#BarHandler# = 6 ? 220 : 100)"][!UpdateMeter #CURRENTSECTION#][!Redraw]
+MouseLeaveAction=[!SetOption #CURRENTSECTION# Fill "Fill Color 255,255,255,(#BarHandler# = 6 ? 220 : 0)"][!UpdateMeter #CURRENTSECTION#][!Redraw]
 
 ;===========================================================================================================================
 ;===========================================================================================================================
@@ -178,6 +184,11 @@ ImageTint=(#BarHandler# = 4 ? 0 : 255),(#BarHandler# = 4 ? 0 : 255),(#BarHandler
 ; MeterStyle=PageIcon
 ; Greyscale=(#BarHandler# = 5 ? 1 : 0)
 ; ImageTint=(#BarHandler# = 5 ? 0 : 255),(#BarHandler# = 5 ? 0 : 255),(#BarHandler# = 5 ? 0 : 255)
+[RenderIcon]
+Meter=Image
+MeterStyle=PageIcon
+Greyscale=(#BarHandler# = 6 ? 1 : 0)
+ImageTint=(#BarHandler# = 6 ? 0 : 255),(#BarHandler# = 6 ? 0 : 255),(#BarHandler# = 6 ? 0 : 255)
 
 ;===========================================================================================================================
 ;===========================================================================================================================
@@ -212,6 +223,10 @@ MeterStyle=sString | PageText
 ; Meter=String
 ; Text=Media
 ; MeterStyle=sString | PageText
+[6]
+Meter=String
+Text=Render
+MeterStyle=sString | PageText
 
 ;===========================================================================================================================
 ;===========================================================================================================================
@@ -223,7 +238,7 @@ MeterStyle=sString
 Text=HELP
 FontFace=Segoe UI
 X=#setTP#
-Y=(#SetH#-70)
+Y=(#SetH#-100)
 StringAlign=Left
 FontSize=8
 Container=
@@ -238,14 +253,26 @@ MeterStyle=PageBox
 Fill=Fill Color 255,255,255,(#BarHandler# = 11 ? 220 : 0)
 MouseOverAction=[!SetOption #CURRENTSECTION# Fill "Fill Color 255,255,255,(#BarHandler# = 11 ? 220 : 100)"][!UpdateMeter #CURRENTSECTION#][!Redraw]
 MouseLeaveAction=[!SetOption #CURRENTSECTION# Fill "Fill Color 255,255,255,(#BarHandler# = 11 ? 220 : 0)"][!UpdateMeter #CURRENTSECTION#][!Redraw]
+DynamicVariables=1
+[FAQ]
+Meter=Shape
+MeterStyle=PageBox
+Fill=Fill Color 255,255,255,(#BarHandler# = 12 ? 220 : 0)
+MouseOverAction=[!SetOption #CURRENTSECTION# Fill "Fill Color 255,255,255,(#BarHandler# = 12 ? 220 : 100)"][!UpdateMeter #CURRENTSECTION#][!Redraw]
+MouseLeaveAction=[!SetOption #CURRENTSECTION# Fill "Fill Color 255,255,255,(#BarHandler# = 12 ? 220 : 0)"][!UpdateMeter #CURRENTSECTION#][!Redraw]
 
 [HelpIcon]
 Meter=Image
 X=(#setTP#*1.5)
-Y=(#SetH#-70+#SetTP#*2)
+Y=(#SetH#-100+#SetTP#*2)
 MeterStyle=PageIcon
-Greyscale=(#BarHandler# = 1 ? 1 : 0)
+Greyscale=(#BarHandler# = 11 ? 1 : 0)
 ImageTint=(#BarHandler# = 11 ? 0 : 255),(#BarHandler# = 11 ? 0 : 255),(#BarHandler# = 11 ? 0 : 255)
+[FAQIcon]
+Meter=Image
+MeterStyle=PageIcon
+Greyscale=(#BarHandler# = 12 ? 1 : 0)
+ImageTint=(#BarHandler# = 12 ? 0 : 255),(#BarHandler# = 12 ? 0 : 255),(#BarHandler# = 12 ? 0 : 255)
 
 [11]
 Meter=String
@@ -253,6 +280,10 @@ Text=Help
 X=(#setTP#*1.5+24+5)
 Y=([HelpIcon:Y]+24/2)
 DynamicVariables-1
+MeterStyle=sString | PageText
+[12]
+Meter=String
+Text=FAQ
 MeterStyle=sString | PageText
 
 

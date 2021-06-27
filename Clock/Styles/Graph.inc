@@ -1,10 +1,4 @@
 [Rainmeter]
-ContextAction=[!Move (#SCREENAREAWIDTH#/2-#SW#/2) (#SCREENAREAHEIGHT#/2-#SH#/2)]
-ContextTitle=Move Middle
-ContextAction2=[!Move 30 30]
-ContextTitle2=Move Top Left
-ContextAction3=!Refresh
-ContextTitle3=Refresh
 Update=25
 SkinWidth=#SW#
 Skinheight=#SH#
@@ -18,9 +12,10 @@ SH=(500*#Scale#)
 SW=(500*#Scale#)
 StartEnd=(50*#Scale#)
 
+
 [mHour]
 Measure=Time
-Format=%H
+Format=%#2412#
 AverageSize=12
 UpdateDivider=50
 [mMinA]
@@ -45,22 +40,6 @@ Formula=(mSecA%60)
 MaxValue=60
 UpdateDivider=1
 
-[Hour]
-Meter=String
-MeasureName=mHour
-X=(90*#Scale#)
-Y=(#SH#/2)
-MeterStyle=S | style1
-
-[Minute]
-Meter=String
-MeasureName=mMin
-MeterStyle=S | style1
-[seconds]
-Meter=String
-MeasureName=mSec
-MeterStyle=S | style1
-
 [Style1]
 FontColor=#OppositeColor#
 Text=%1
@@ -74,9 +53,29 @@ Group=Text
 [Graph]
 Meter=shape
 DynamicVariables=1
-Shape=Ellipse (90*#Scale#+#Spacing#*0),(#SH#-#StartEnd#-(#SH#-#StartEnd#*2)*[mHour]/24),10,10 | Extend Circle
-Shape2=Ellipse (90*#Scale#+#Spacing#*1),(#SH#-#StartEnd#-(#SH#-#StartEnd#*2)*[mMin]/60),10,10 | Extend Circle
-Shape3=Ellipse (90*#Scale#+#Spacing#*2),(#SH#-#StartEnd#-(#SH#-#StartEnd#*2)*[mSec]/60),10,10 | Extend Circle
-Shape4=Path This | StrokeWidth 10 | Stroke Color #OppositeColor#,100 | StrokeLineJoin Round | StrokeStartCap Round | StrokeEndCap Round
+Shape=Ellipse (90*#Scale#+#Spacing#*0),(#SH#-#StartEnd#-(#SH#-#StartEnd#*2)*[mHour]/24),(#LineWidth#/2*#Circle#),(#LineWidth#/2*#Circle#) | Extend Circle
+Shape2=Ellipse (90*#Scale#+#Spacing#*1),(#SH#-#StartEnd#-(#SH#-#StartEnd#*2)*[mMin]/60),(#LineWidth#/2*#Circle#),(#LineWidth#/2*#Circle#) | Extend Circle
+Shape3=Ellipse (90*#Scale#+#Spacing#*2),(#SH#-#StartEnd#-(#SH#-#StartEnd#*2)*[mSec]/60),(#LineWidth#/2*#Circle#),(#LineWidth#/2*#Circle#) | Extend Circle
+Shape4=Path This | StrokeWidth #LineWidth# | StrokeLineJoin Round | StrokeStartCap Round | StrokeEndCap Round | Extend Fill
+Fill=Stroke Color #OppositeColor#,100
 This=(90*#Scale#+#Spacing#*0),(#SH#-#StartEnd#-(#SH#-#StartEnd#*2)*[mHour]/24) | LineTo (90*#Scale#+#Spacing#*1),(#SH#-#StartEnd#-(#SH#-#StartEnd#*2)*[mMin]/60) | LineTo (90*#Scale#+#Spacing#*2),(#SH#-#StartEnd#-(#SH#-#StartEnd#*2)*[mSec]/60)
 Circle=StrokeWidth 0 | Fill Color #OppositeColor#,100
+
+
+
+[Hour]
+Meter=String
+MeasureName=mHour
+X=(90*#Scale#)
+Y=(#SH#/2)
+MeterStyle=S | style1
+[Minute]
+Meter=String
+MeasureName=mMin
+MeterStyle=S | style1
+[seconds]
+Meter=String
+MeasureName=mSec
+MeterStyle=S | style1
+
+@includeRender=Render\Graph\#Render#.inc
