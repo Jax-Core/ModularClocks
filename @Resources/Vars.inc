@@ -1,5 +1,5 @@
 [Variables]
-Scale=1
+Scale=0.8
 ;I H
 2412=H
 
@@ -10,7 +10,7 @@ OppositeColor=255,255,255
 Style=Measure
 
 ;Smart Options
-Align=Center
+Align=Left
 Weather=1
 Date=1
 DateTimeRatio=0.14

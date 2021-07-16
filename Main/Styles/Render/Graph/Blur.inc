@@ -1,6 +1,5 @@
-[Rainmeter]
-ContextAction5=[!Delay 1000][!CommandMeasure ImageBlur Update]
-ContextTitle5=Reload blur
+[Variables]
+Sec.Ctx.Blur=1
 
 [ImageBlur]
 Measure=Plugin
