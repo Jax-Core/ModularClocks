@@ -1,7 +1,7 @@
 [Rainmeter]
 ; SolidColor=255,255,255,25
 ; BackgroundMode=2
-Update=25
+Update=#Rm.Update#
 DefaultUpdateDivider=-1
 SkinWidth=#SW#
 SkinHeight=#SH#
@@ -18,7 +18,7 @@ FontFace=a Astro Space
 Measure=Time
 Format=%#2412#%M
 DynamicVariables=1
-UpdateDivider=50
+UpdateDivider=(1000/#Rm.Update#)
 [mSecA]
 Measure=Time
 Format=%S
@@ -83,10 +83,10 @@ MeterStyle=String:S
 StringAlign=CenterCenter
 StringEffect=Border
 FontEffectColor=81, 55, 20
-UpdateDivider=50
+UpdateDivider=(1000/#Rm.Update#)
 FontWeight=200
 FontFace=a Astro Space
-UpdateDivider=50
+UpdateDivider=(1000/#Rm.Update#)
 
 [SecArc]
 Meter=Roundline
@@ -119,7 +119,7 @@ InlinePattern2=\d
 InlineSetting2=Size | (14*#scale#)
 InlinePattern3=//.*
 InlineSetting3=Color | 143, 127, 30
-UpdateDivider=50
+UpdateDivider=(1000/#Rm.Update#)
 FontWeight=200
 Hidden=(1-#Showdetails#)
 [Runic1]

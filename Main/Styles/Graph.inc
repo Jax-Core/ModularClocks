@@ -1,5 +1,5 @@
 [Rainmeter]
-Update=25
+Update=#Rm.Update#
 SkinWidth=#SW#
 Skinheight=#SH#
 ; SolidColor=255,255,255,25
@@ -17,7 +17,7 @@ StartEnd=(50*#Scale#)
 Measure=Time
 Format=%#2412#
 AverageSize=12
-UpdateDivider=50
+UpdateDivider=(1000/#Rm.Update#)
 [mMinA]
 Measure=Time
 Format=%M

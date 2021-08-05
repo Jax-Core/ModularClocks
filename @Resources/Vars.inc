@@ -52,6 +52,6 @@ WeatherUnits=Metric
 ; The units of the weather info. Valid values are "Metric" and "Imperial".
 Language=en
 
-Cache.Wallpaper=C:\Users\enhan\Pictures\Graphics\Wallpapers\modern-black-background-2k.jpg
-Img.W=2560
-Img.H=1530
+Cache.Wallpaper=C:\Users\enhan\Pictures\Graphics\Wallpapers\xxn.png
+Img.W=5120
+Img.H=2880
