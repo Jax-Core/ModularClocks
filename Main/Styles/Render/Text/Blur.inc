@@ -1,26 +1,27 @@
-[Rainmeter]
-ContextAction5=[!Delay 1000][!CommandMeasure ImageBlur Update]
-ContextTitle5=Reload blur
-
-[ImageBlur]
-Measure=Plugin
-Plugin=MagickMeter
-DynamicVariables=1
-Image=File Screenshot@1 | Modulate 150,100,100 | Blur #BlurRadius#,#BlurSigma#
-UpdateDivider=-1
 [ImageMeter]
 Meter=Image
-MeasureName=ImageBlur
+ImageName=#@#Export\Blur.png
 DynamicVariables=1
+W=(#Img.W#/(#Img.W#/#SCREENAREAWIDTH#))
+H=(#Img.H#/(#Img.H#/#SCREENAREAHEIGHT#))
 X=(-#CURRENTCONFIGX#)
 Y=(-#CURRENTCONFIGY#)
 UpdateDivider=1
 COntainer=Hour
 [ImageMeter2]
 Meter=Image
-MeasureName=ImageBlur
+ImageName=#@#Export\Blur.png
 DynamicVariables=1
+W=(#Img.W#/(#Img.W#/#SCREENAREAWIDTH#))
+H=(#Img.H#/(#Img.H#/#SCREENAREAHEIGHT#))
 X=(-#CURRENTCONFIGX#-[Tail:X])
 Y=(-#CURRENTCONFIGY#)
 UpdateDivider=1
 COntainer=Tail
+
+
+@includeWallpaper=#SKINSPATH##JaxCore\@Resources\Includes\WallpaperCheck.inc
+
+
+[MM]
+Image=File #Cache.Wallpaper# | RenderSize (#Img.W#/4),(#Img.H#/4) | Modulate #BlurModulate# | Blur #BlurRadius#,#BlurSigma#

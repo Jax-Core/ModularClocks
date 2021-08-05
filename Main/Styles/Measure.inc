@@ -1,7 +1,7 @@
 [Rainmeter]
 ; SolidColor=255,255,255,25
 ; BackgroundMode=2
-Update=25
+Update=#Rm.Update#
 DefaultUpdateDivider=-1
 SkinWidth=(#SW#+(#Stroke#*#Scale#))
 Skinheight=(#SH#+(#Stroke#*#Scale#))

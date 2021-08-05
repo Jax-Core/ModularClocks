@@ -1,5 +1,5 @@
 [Rainmeter]
-Update=25
+Update=#Rm.Update#
 SkinWidth=#SW#
 Skinheight=#SH#
 ; SolidColor=255,255,255,25
@@ -17,7 +17,7 @@ StartEnd=(50*#Scale#)
 Measure=Time
 Format=%#2412#
 AverageSize=12
-UpdateDivider=50
+UpdateDivider=(1000/#Rm.Update#)
 [mMinA]
 Measure=Time
 Format=%M
@@ -68,14 +68,14 @@ Meter=String
 MeasureName=mHour
 X=(90*#Scale#)
 Y=(#SH#/2)
-MeterStyle=S | style1
+MeterStyle=String:S | style1
 [Minute]
 Meter=String
 MeasureName=mMin
-MeterStyle=S | style1
+MeterStyle=String:S | style1
 [seconds]
 Meter=String
 MeasureName=mSec
-MeterStyle=S | style1
+MeterStyle=String:S | style1
 
 @includeRender=Render\Graph\#Render#.inc
