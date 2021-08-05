@@ -1,14 +1,22 @@
 [Variables]
-Scale=0.8
+Scale=1
 ;I H
 2412=H
 
 ColorMode=1
 MainColor=12,12,12
 OppositeColor=255,255,255
+AccentColor=255,0,0
 
-Style=Center
+Style=CircTech
 
+Rm.Update=25
+;ArcOptions
+ArcStart=(180-#ArcEnd#)
+ArcEnd=30
+;Tech options
+ShowDetails=0
+Runic=0
 ;Smart Options
 Align=Left
 Weather=1
@@ -43,3 +51,7 @@ WeatherLocation=Hong Kong
 WeatherUnits=Metric
 ; The units of the weather info. Valid values are "Metric" and "Imperial".
 Language=en
+
+Cache.Wallpaper=C:\Users\enhan\Pictures\Graphics\Wallpapers\modern-black-background-2k.jpg
+Img.W=2560
+Img.H=1530

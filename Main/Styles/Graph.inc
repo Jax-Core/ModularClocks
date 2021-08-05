@@ -68,14 +68,14 @@ Meter=String
 MeasureName=mHour
 X=(90*#Scale#)
 Y=(#SH#/2)
-MeterStyle=S | style1
+MeterStyle=String:S | style1
 [Minute]
 Meter=String
 MeasureName=mMin
-MeterStyle=S | style1
+MeterStyle=String:S | style1
 [seconds]
 Meter=String
 MeasureName=mSec
-MeterStyle=S | style1
+MeterStyle=String:S | style1
 
 @includeRender=Render\Graph\#Render#.inc

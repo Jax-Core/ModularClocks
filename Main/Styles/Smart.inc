@@ -23,7 +23,7 @@ Meter=String
 MeasureName=mTime
 FontFace=MetroPolis Semi Bold
 FontSize=(70*#scale#)
-MeterStyle=S | Time#Align#
+MeterStyle=String:S | Time#Align#
 
 [WeatherIcon]
 Meter=Image
@@ -36,7 +36,7 @@ MeterStyle=Wea#Align#
 
 [WeatherText]
 Meter=String
-MeterStyle=S | WeaText#Align#
+MeterStyle=String:S | WeaText#Align#
 Y=(50/2*#Scale#)r
 FontSize=(20*#Scale#*#Weather#)
 Text=%1%2
@@ -46,7 +46,7 @@ Measurename2=mUnitsTemperature
 
 [DateText]
 Meter=String
-MeterStyle=S | Time#Align#
+MeterStyle=String:S | Time#Align#
 Y=R
 FontSize=(#DateTimeRatio#*100*#Scale#*#date#)
 Text=%1

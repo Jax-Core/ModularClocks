@@ -31,7 +31,7 @@ MeasureName=mHour
 Text=%1
 FontFace=MetroPolis Semi Bold
 FontSize=(50*#scale#)
-MeterStyle=S
+MeterStyle=String:S
 [Highlight]
 Meter=String
 X=R
@@ -39,7 +39,7 @@ MeasureName=mMinHead
 Text=%1
 FontFace=MetroPolis Semi Bold
 FontSize=(50*#scale#)
-MeterStyle=S
+MeterStyle=String:S
 [Tail]
 Meter=String
 X=R
@@ -47,7 +47,7 @@ MeasureName=mMinTail
 Text=%1
 FontFace=MetroPolis Semi Bold
 FontSize=(50*#scale#)
-MeterStyle=S
+MeterStyle=String:S
 
 
 

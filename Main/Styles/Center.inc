@@ -19,7 +19,7 @@ Format=%M
 
 [Hour]
 Meter=String
-MeterStyle=S
+MeterStyle=String:S
 FontSize=(200*#Scale#)
 X=(250*#Scale#)
 Y=(170*#Scale#)
@@ -32,7 +32,7 @@ DynamicVariables=1
 ; SolidColor=255,255,255,20
 [Min]
 Meter=String
-MeterStyle=S
+MeterStyle=String:S
 X=r
 Y=(210*#Scale#)r
 FontSize=(200*#Scale#)

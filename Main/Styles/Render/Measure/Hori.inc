@@ -6,7 +6,7 @@ WaveScale=(#Scale#*2)
 
 [Hour]
 Meter=String
-MeterStyle=S
+MeterStyle=String:S
 X=(#SW#/2)
 Y=(60*#Scale#)
 StringAlign=CenterCenter
@@ -31,7 +31,7 @@ Shape3=Combine Shape | Intersect Shape2
 
 [Hour2]
 Meter=String
-MeterStyle=S | Hour
+MeterStyle=String:S | Hour
 FontColor=#MainColor#
 Container=MaskWave
 [MaskWave]
@@ -44,7 +44,7 @@ This=0,0 | CurveTo (100*#WaveScale#),0,(15*#WaveScale#),(-15*#WaveScale#),((100-
 
 [Hour3]
 Meter=
-MeterStyle=S
+MeterStyle=String:S
 X=(#SW#/2)
 Y=(60*#Scale#)
 StringAlign=CenterCenter
