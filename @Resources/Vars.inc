@@ -30,7 +30,7 @@ Stroke=0
 Circle=0
 LineWidth=10
 
-Render=Blur
+Render=Chameleon
 
 ;RenderBlur (Brightness, Saturation, Hue)
 BlurModulate=150,100,100
