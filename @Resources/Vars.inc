@@ -8,7 +8,7 @@ MainColor=12,12,12
 OppositeColor=255,255,255
 AccentColor=255,0,0
 
-Style=CircTech
+Style=Measure
 
 Rm.Update=25
 ;ArcOptions
@@ -30,7 +30,7 @@ Stroke=0
 Circle=0
 LineWidth=10
 
-Render=Chameleon
+Render=Blur
 
 ;RenderBlur (Brightness, Saturation, Hue)
 BlurModulate=150,100,100
@@ -52,6 +52,6 @@ WeatherUnits=Metric
 ; The units of the weather info. Valid values are "Metric" and "Imperial".
 Language=en
 
-Cache.Wallpaper=C:\Users\enhan\Pictures\Graphics\Wallpapers\xxn.png
-Img.W=5120
-Img.H=2880
+Cache.Wallpaper=C:\Users\enhan\Pictures\Graphics\Wallpapers\171717.png
+Img.W=136
+Img.H=135
