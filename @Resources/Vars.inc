@@ -1,57 +1,46 @@
 [Variables]
-Scale=1
-;I H
-2412=H
+Scale=1.3
+2412=I
+AnimationUpdateRate=0
 
-ColorMode=1
-MainColor=12,12,12
-OppositeColor=255,255,255
-AccentColor=255,0,0
+Align=Center
+Rows=Single
+Fill=Gradient
+; Image=None
+Layout=Single
+; Val=Time
+Sec=2
 
-Style=CircTech
-
-Rm.Update=25
-;ArcOptions
-ArcStart=(180-#ArcEnd#)
-ArcEnd=30
-;Tech options
-ShowDetails=0
-Runic=0
-;Smart Options
-Align=Left
-Weather=1
-Date=1
-DateTimeRatio=0.14
+1stColor=255,255,255
+1stOpacity=255
+2ndColor=153,153,153
+2ndOpacity=255
+3rdColor=0,0,0
+3rdOpacity=150
+GlowSigma=5
+GradientAngle=270
+FontWeight=400
 Seperator=:
-;Measure options
-Rotation=Vert
-Stroke=0
-;Graph options
-Circle=0
-LineWidth=10
+Seperator2='  '
+Name=Jax
+AntiAlias=1
+ChameleonSampleRate=-1
+ChameleonSource=Background
+ChameleonGraident=0
 
-Render=Blur
+; https://docs.rainmeter.net/manual/measures/time/#FormatCodes
 
-;RenderBlur (Brightness, Saturation, Hue)
+; WeatherLocation=Hong Kong
+; WeatherUnits=Metric
+; Language=en
+
+Cache.Wallpaper=C:\Users\enhan\Pictures\Graphics\Wallpapers\pine-watt-2Hzmz15wGik-unsplash.jpg
+Img.W=4286
+Img.H=2846
+
 BlurModulate=150,100,100
 BlurRadius=10
 BlurSigma=10
 
-;RenderShadow
-ShadowOpacity=80
-ShadowSigma=10
-ShadowOffset=0,0
-
-;RenderBar
-BarBackpacity=150
-
-WeatherLocation=Hong Kong
-; Just enter your city's name or your address here or whatever. Anything should work here.
-; TIP: Check Rainmeter's log to see what location it got.
-WeatherUnits=Metric
-; The units of the weather info. Valid values are "Metric" and "Imperial".
-Language=en
-
-Cache.Wallpaper=C:\Users\enhan\Pictures\Graphics\Wallpapers\xxn.png
-Img.W=5120
-Img.H=2880
+RGBSpeed=1
+Fontface=Takota

@@ -1,0 +1,19 @@
+[mHour]
+Measure=Time
+Format=%#2412#
+; RegexpSubstitute=1
+Substitute="01":"one","02":"two","03":"three","04":"four","05":"five","06":"six","07":"seven","08":"eight","09":"nine","10":"ten","11":"eleven","12":"twelve","13":"thirteen","14":"fourteen","15":"fifteen","16":"sixteen","17":"seventeen","18":"eighteen","19":"ninteen","20":"twenty","21":"twentyone","22":"twentytwo","23":"twentythree","24":"zero"
+[mMinHead]
+Measure=time
+Format=%M
+RegexpSubstitute=1
+Substitute="^0":"Zero","^2":"Twenty","^3":"Thirty","^4":"Forty","^5":"Fifty","10":"Ten","11":"Eleven","12":"Twelve","13":"Thirteen","14":"Fourteen","15":"Fifteen","16":"Sixteen","17":"Seventeen","18":"Eighteen","19":"Ninteen","[1234567890]":""
+[mMinTail]
+Measure=time
+Format=%M
+RegexpSubstitute=1
+Substitute="0$":"","[02345]1$":"one","[02345]2$":"two","[02345]3$":"three","[02345]4$":"four","[02345]5$":"five","[02345]6$":"six","[02345]7$":"seven","[02345]8$":"eight","[02345]9$":"nine","[1234567890]":""
+[m2]
+Measure=String
+String=[mhour][mMinHead][mMintail]
+DynamicVariables=1
