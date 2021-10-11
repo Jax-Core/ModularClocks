@@ -35,7 +35,7 @@ Render=Blur
 ;RenderBlur (Brightness, Saturation, Hue)
 BlurModulate=150,100,100
 BlurRadius=10
-BlurSigma=10
+BlurSigma=2
 
 ;RenderShadow
 ShadowOpacity=80
@@ -52,6 +52,6 @@ WeatherUnits=Metric
 ; The units of the weather info. Valid values are "Metric" and "Imperial".
 Language=en
 
-Cache.Wallpaper=C:\Users\enhan\Pictures\Graphics\Wallpapers\171717.png
-Img.W=136
-Img.H=135
+Cache.Wallpaper=C:\Users\enhan\Pictures\Graphics\!Logo\Wallpaper.png
+Img.W=1920
+Img.H=1080

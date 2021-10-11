@@ -222,7 +222,7 @@ Meter=Shape
 X=(20*[Set.S])
 Y=(10*[Set.S])R
 MeterStyle=VersionBox
-Leftmouseupaction=[!WriteKeyvalue Variables VersionPage 1 "#SKINSPATH##JaxCore\SecOverrides\#Skin.Name#\Appearance.inc"][!Refresh]
+Leftmouseupaction=[!WriteKeyvalue Variables VersionPage 1 "#SKINSPATH##SKin.Name#\Core\Appearance.inc"][!Refresh]
 [Ver1Text]
 Meter=String
 X=([Ver1:W]/2)r
@@ -237,7 +237,7 @@ Meter=Shape
 X=(([Ver1:W]/2)+20*[Set.S])r
 Y=(-15*[Set.S])r
 MeterStyle=VersionBox
-Leftmouseupaction=[!WriteKeyvalue Variables VersionPage 2 "#SKINSPATH##JaxCore\SecOverrides\#Skin.Name#\Appearance.inc"][!Refresh]
+Leftmouseupaction=[!WriteKeyvalue Variables VersionPage 2 "#SKINSPATH##SKin.Name#\Core\Appearance.inc"][!Refresh]
 [Ver2Text]
 Meter=String
 Text=Version 2 Styles
