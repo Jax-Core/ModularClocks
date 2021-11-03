@@ -1,23 +1,3 @@
-[Export:M]
-Measure=String
-String=#Style#
-IfMatch=Center
-IfNotMatchAction=[!HideMeterGroup Center]
-IfMatch2=Measure
-IfNotMatchAction2=[!HideMeterGroup Measure]
-IfMatch3=Graph
-IfNotMatchAction3=[!HideMeterGroup Graph]
-IfMatch4=Smart
-IfNotMatchAction4=[!HideMeterGroup Smart]
-IfMatch5=^CircTech$
-IfNotMatchAction5=[!HideMeterGroup CircTech]
-IfMatch6=^Tech$
-IfNotMatchAction6=[!HideMeterGroup Tech]
-IfMatch7=Arc
-IfNotMatchAction7=[!HideMeterGroup Arc]
-IfMatch8=Light
-IfNotMatchAction8=[!HideMeterGroup Light]
-
 [Export2:M]
 Measure=String
 String=#VersionPage#
@@ -26,6 +6,9 @@ IfMatchAction=[!HideMeterGroup V2]
 IfMatch2=2
 IfMatchAction2=[!HideMeterGroup V1]
 
+[Export:M]
+Measure=String
+OnUpdateAction=[!SetOption #Style# MeterStyle "Box:Selected"][!ShowMeterGroup #Style#][!UpdateMeter #Style#][!Redraw]
 
 [Header]
 Meter=String
@@ -99,116 +82,133 @@ Shape=Rectangle  0,0,(([ContentContainer:W]-120*[Set.S])/5),(([ContentContainer:
 Fill=Fill Color 255,255,255,10
 MouseOverAction=[!SetOption #CURRENTSECTION# Fill "Fill Color 255,255,255,150"][!UpdateMeter #CURRENTSECTION#][!Redraw]
 MouseLeaveAction=[!SetOption #CURRENTSECTION# Fill "Fill Color 255,255,255,10"][!UpdateMeter #CURRENTSECTION#][!Redraw]
+Leftmouseupaction=[!WriteKeyValue Variables Style #CURRENTSECTION# "#Sec.SaveLocation#"][!Refresh][!UpdateMeasure Auto_Refresh:M]
 DynamicVariables=1
 Container=ContentContainer
-[Box1]
+[Box:Selected]
+Shape=Rectangle  0,0,(([ContentContainer:W]-120*[Set.S])/5),(([ContentContainer:W]-120*[Set.S])/5),#set.R# | StrokeWidth 0 | Extend Fill
+Fill=Fill Color 255,255,255,80
+DynamicVariables=1
+Container=ContentContainer
+[Center]
 Meter=Shape
 X=r
 Y=(20*[Set.S])R
 MeterStyle=Box
-[Box2]
+Group=V1
+[Measure]
 Meter=Shape
 X=(20*[Set.S])R
 Y=r
 MeterStyle=Box
-[Box3]
+Group=V1
+[Graph]
 Meter=Shape
 X=(20*[Set.S])R
 Y=r
 MeterStyle=Box
-[Box4]
+Group=V1
+[Smart]
 Meter=Shape
 X=(20*[Set.S])R
 Y=r
 MeterStyle=Box
-[Box5]
+Group=V1
+[Text]
 Meter=Shape
 X=(20*[Set.S])R
 Y=r
 MeterStyle=Box
-[BoxAdd]
-Meter=Shape
-X=642
-Y=r
-DynamicVariables=1
-Fill=Fill Color 255,255,255,50
-Mouseoveraction=[]
-MouseLeaveAction=[]
-MeterStyle=Box
+Group=V1
 
+[CircTech]
+Meter=Shape
+X=(30*[Set.S])
+Y=r
+MeterStyle=Box
+Group=V2
+[Tech]
+Meter=Shape
+X=(20*[Set.S])R
+Y=r
+MeterStyle=Box
+Group=V2
+[Arc]
+Meter=Shape
+X=(20*[Set.S])R
+Y=r
+MeterStyle=Box
+Group=V2
+[Light]
+Meter=Shape
+X=(20*[Set.S])R
+Y=r
+MeterStyle=Box
+Group=V2
 
-[Center]
+[CenterPreview]
 Meter=Image
 Imagename=#SKINSPATH#ModularClocks\@Resources\Images\Preview\#CURRENTSECTION#.png
-X=([Box1:X])
-Y=([Box1:Y])
+X=([Center:X])
+Y=([Center:Y])
 W=(([ContentContainer:W]-120*[Set.S])/5)
 H=(([ContentContainer:W]-120*[Set.S])/5)
 Solidcolor=0,0,0,1
-Leftmouseupaction=[!WriteKeyValue Variables Style #CURRENTSECTION# "#Sec.SaveLocation#"][!WriteKeyValue BoxAdd X "([#CURRENTSECTION#:X]-[ContentContainer:X])" "#ROOTCONFIGPATH#SecOverrides\ModularClocks\Appearance.inc"][!Refresh][!UpdateMeasure Auto_Refresh:M]
 DynamicVariables=1
 Group=V1
 
-[Measure]
+[MeasurePreview]
 Meter=Image
 X=(20*[Set.S])R
 Y=r
-MeterStyle=Center
-Leftmouseupaction=[!WriteKeyValue Variables Style #CURRENTSECTION# "#Sec.SaveLocation#"][!WriteKeyValue BoxAdd X "([#CURRENTSECTION#:X]-[ContentContainer:X])" "#ROOTCONFIGPATH#SecOverrides\ModularClocks\Appearance.inc"][!Refresh][!UpdateMeasure Auto_Refresh:M]
+MeterStyle=CenterPreview
 
-[Graph]
+[GraphPreview]
 Meter=Image
 X=(20*[Set.S])R
 Y=r
-MeterStyle=Center
-Leftmouseupaction=[!WriteKeyValue Variables Style #CURRENTSECTION# "#Sec.SaveLocation#"][!WriteKeyValue BoxAdd X "([#CURRENTSECTION#:X]-[ContentContainer:X])" "#ROOTCONFIGPATH#SecOverrides\ModularClocks\Appearance.inc"][!Refresh][!UpdateMeasure Auto_Refresh:M]
+MeterStyle=CenterPreview
 
-[Smart]
+[SmartPreview]
 Meter=Image
 X=(20*[Set.S])R
 Y=r
-MeterStyle=Center
-Leftmouseupaction=[!WriteKeyValue Variables Style #CURRENTSECTION# "#Sec.SaveLocation#"][!WriteKeyValue BoxAdd X "([#CURRENTSECTION#:X]-[ContentContainer:X])" "#ROOTCONFIGPATH#SecOverrides\ModularClocks\Appearance.inc"][!Refresh][!UpdateMeasure Auto_Refresh:M]
+MeterStyle=CenterPreview
 
-[Text]
+[TextPreview]
 Meter=Image
 X=(20*[Set.S])R
 Y=r
-MeterStyle=Center
-Leftmouseupaction=[!WriteKeyValue Variables Style #CURRENTSECTION# "#Sec.SaveLocation#"][!WriteKeyValue BoxAdd X "([#CURRENTSECTION#:X]-[ContentContainer:X])" "#ROOTCONFIGPATH#SecOverrides\ModularClocks\Appearance.inc"][!Refresh][!UpdateMeasure Auto_Refresh:M]
+MeterStyle=CenterPreview
 
-[CircTech]
+[CircTechPreview]
 Meter=Image
 Imagename=#SKINSPATH#ModularClocks\@Resources\Images\Preview\#CURRENTSECTION#.png
-X=([Box1:X])
-Y=([Box1:Y])
+X=([Center:X])
+Y=([Center:Y])
 W=(([ContentContainer:W]-120*[Set.S])/5)
 H=(([ContentContainer:W]-120*[Set.S])/5)
 Solidcolor=0,0,0,1
-Leftmouseupaction=[!WriteKeyValue Variables Style #CURRENTSECTION# "#Sec.SaveLocation#"][!WriteKeyValue BoxAdd X "([#CURRENTSECTION#:X]-[ContentContainer:X])" "#ROOTCONFIGPATH#SecOverrides\ModularClocks\Appearance.inc"][!Refresh][!UpdateMeasure Auto_Refresh:M]
 DynamicVariables=1
 Group=V2
 
-[Tech]
+[TechPreview]
 Meter=Image
 X=(20*[Set.S])R
 Y=r
-MeterStyle=CircTech
-Leftmouseupaction=[!WriteKeyValue Variables Style #CURRENTSECTION# "#Sec.SaveLocation#"][!WriteKeyValue BoxAdd X "([#CURRENTSECTION#:X]-[ContentContainer:X])" "#ROOTCONFIGPATH#SecOverrides\ModularClocks\Appearance.inc"][!Refresh][!UpdateMeasure Auto_Refresh:M]
+MeterStyle=CircTechPreview
 
-[Arc]
+[ArcPreview]
 Meter=Image
 X=(20*[Set.S])R
 Y=r
-MeterStyle=CircTech
-Leftmouseupaction=[!WriteKeyValue Variables Style #CURRENTSECTION# "#Sec.SaveLocation#"][!WriteKeyValue BoxAdd X "([#CURRENTSECTION#:X]-[ContentContainer:X])" "#ROOTCONFIGPATH#SecOverrides\ModularClocks\Appearance.inc"][!Refresh][!UpdateMeasure Auto_Refresh:M]
+MeterStyle=CircTechPreview
 
-[Light]
+[LightPreview]
 Meter=Image
 X=(20*[Set.S])R
 Y=r
-MeterStyle=CircTech
-Leftmouseupaction=[!WriteKeyValue Variables Style #CURRENTSECTION# "#Sec.SaveLocation#"][!WriteKeyValue BoxAdd X "([#CURRENTSECTION#:X]-[ContentContainer:X])" "#ROOTCONFIGPATH#SecOverrides\ModularClocks\Appearance.inc"][!Refresh][!UpdateMeasure Auto_Refresh:M]
+MeterStyle=CircTechPreview
 
 [VersionBox]
 Shape=Rectangle 0,0,(([ContentContainer:W]-60*[Set.S])/2),(30*[Set.S]),(10/2) | StrokeWidth 0 | Extend Fill
@@ -220,7 +220,7 @@ Container=ContentContainer
 [Ver1]
 Meter=Shape
 X=(20*[Set.S])
-Y=(10*[Set.S])R
+Y=([Center:Y]+[Center:H]+[Light:H]-20*[Set.S])
 MeterStyle=VersionBox
 Leftmouseupaction=[!WriteKeyvalue Variables VersionPage 1 "#SKINSPATH##SKin.Name#\Core\Appearance.inc"][!Refresh]
 [Ver1Text]
@@ -259,6 +259,7 @@ MeterStyle=Set.String:S | Set.OptionName:S
 Meter=Shape
 MeterStyle=Set.Div:S
 Group=Smart
+Hidden=1
 [Option02]
 Meter=String
 X=r
@@ -267,11 +268,13 @@ FontSize=(10*[Set.S])
 Text=Align
 MeterStyle=Set.String:S
 Group=Smart
+Hidden=1
 Container=ContentContainer
 [Divider19203s8]
 Meter=Shape
 MeterStyle=Set.Div:S
 Group=Smart
+Hidden=1
 [Option03]
 Meter=String
 X=r
@@ -280,10 +283,12 @@ FontSize=(10*[Set.S])
 Text=Weather
 MeterStyle=Set.String:S
 Group=Smart
+Hidden=1
 Container=ContentContainer
 [Divider1920328]
 Meter=Shape
 Group=Smart
+Hidden=1
 MeterStyle=Set.Div:S
 [Option04]
 Meter=String
@@ -293,11 +298,13 @@ FontSize=(10*[Set.S])
 Text=Date
 MeterStyle=Set.String:S
 Group=Smart
+Hidden=1
 Container=ContentContainer
 [Divider19w20328]
 Meter=Shape
 MeterStyle=Set.Div:S
 Group=Smart
+Hidden=1
 [Option05]
 Meter=String
 X=r
@@ -306,6 +313,7 @@ FontSize=(10*[Set.S])
 Text=Date-Time scaling ratio
 MeterStyle=Set.String:S
 Group=Smart
+Hidden=1
 Container=ContentContainer
 
 
@@ -316,6 +324,7 @@ MeterStyle=Set.Div:S
 Y=([Option01:Y]-#Set.P#+15*2)
 DynamicVariables=1
 Group=Measure
+Hidden=1
 [Option06]
 Meter=String
 X=r
@@ -324,11 +333,13 @@ FontSize=(10*[Set.S])
 Text=Rotation (Hori / Vert)
 MeterStyle=Set.String:S
 Group=Measure
+Hidden=1
 Container=ContentContainer
 [Divider19w20dsdaw328]
 Meter=Shape
 MeterStyle=Set.Div:S
 Group=Measure
+Hidden=1
 [Option07]
 Meter=String
 X=r
@@ -337,6 +348,7 @@ FontSize=(10*[Set.S])
 Text=Stroke width
 MeterStyle=Set.String:S
 Group=Measure
+Hidden=1
 Container=ContentContainer
 
 
@@ -347,6 +359,7 @@ MeterStyle=Set.Div:S
 Y=([Option01:Y]-#Set.P#+15*2)
 DynamicVariables=1
 Group=Graph
+Hidden=1
 [Option08]
 Meter=String
 X=r
@@ -355,11 +368,13 @@ FontSize=(10*[Set.S])
 Text=Show dot
 MeterStyle=Set.String:S
 Group=Graph
+Hidden=1
 Container=ContentContainer
 [Divider19wdaw328]
 Meter=Shape
 MeterStyle=Set.Div:S
 Group=Graph
+Hidden=1
 [Option09]
 Meter=String
 X=r
@@ -368,6 +383,7 @@ FontSize=(10*[Set.S])
 Text=Line width
 MeterStyle=Set.String:S
 Group=Graph
+Hidden=1
 Container=ContentContainer
 
 [Divider19w2sdsds0ssdsd]
@@ -376,6 +392,7 @@ MeterStyle=Set.Div:S
 Y=([Option01:Y]-#Set.P#+15*2)
 DynamicVariables=1
 Group=Tech
+Hidden=1
 [Option11]
 Meter=String
 X=r
@@ -384,11 +401,13 @@ FontSize=(10*[Set.S])
 Text=Show additional time details
 MeterStyle=Set.String:S
 Group=Tech
+Hidden=1
 Container=ContentContainer
 [Divider19wdwqeqewqeqweaw328]
 Meter=Shape
 MeterStyle=Set.Div:S
 Group=Tech
+Hidden=1
 [Option12]
 Meter=String
 X=r
@@ -397,6 +416,7 @@ FontSize=(10*[Set.S])
 Text=Use the runic font
 MeterStyle=Set.String:S
 Group=Tech
+Hidden=1
 Container=ContentContainer
 
 ; ;================================================================================================================================================================================
@@ -419,6 +439,7 @@ Container=ContentContainer
 [Rm.Update]
 Meter=Shape
 MeterStyle=Set.TextBox:S
+Type=Int|0|50
 Y=([Option000:Y]-#Set.P#+(-30/2+8)*[Set.S])
 [Value000]
 Meter=String
@@ -428,6 +449,7 @@ MeterStyle=Set.String:S | Set.Value:S
 [Scale]
 Meter=Shape
 MeterStyle=Set.Textbox:S
+Type=Num|0.5|2
 Y=([Option01:Y]-#Set.P#+(-30/2+8)*[Set.S])
 [Value01]
 Meter=String
@@ -438,73 +460,91 @@ MeterStyle=Set.String:S | Set.Value:S
 Meter=Shape
 MeterStyle=Set.TextBox:S
 Group=Smart
+Hidden=1
+Type=Txt
 Y=([Option02:Y]-#Set.P#+(-30/2+8)*[Set.S])
 [Value02]
 Meter=String
 Text=#Align#
 Group=Smart
+Hidden=1
 MeterStyle=Set.String:S | Set.Value:S
 
 [Weather]
 Meter=Shape
 MeterStyle=Set.Bool:S
 Group=Smart
+Hidden=1
 Y=([Option03:Y]-#Set.P#+(-20/2+8)*[Set.S])
 
 [Date]
 Meter=Shape
 MeterStyle=Set.Bool:S
 Group=Smart
+Hidden=1
 Y=([Option04:Y]-#Set.P#+(-20/2+8)*[Set.S])
 
 [DateTimeRatio]
 Meter=Shape
 MeterStyle=Set.TextBox:S
 Group=Smart
+Hidden=1
+Type=Num|0.1|2
 Y=([Option05:Y]-#Set.P#+(-30/2+8)*[Set.S])
 [Value05]
 Meter=String
 Text=#DateTimeRatio#
 Group=Smart
+Hidden=1
 MeterStyle=Set.String:S | Set.Value:S
 
 [Rotation]
 Meter=Shape
 MeterStyle=Set.TextBox:S
 Group=Measure
+Hidden=1
+Type=Txt
 Y=([Option06:Y]-#Set.P#+(-30/2+8)*[Set.S])
 [Value06]
 Meter=String
 Text=#Rotation#
 Group=Measure
+Hidden=1
 MeterStyle=Set.String:S | Set.Value:S
 
 [Stroke]
 Meter=Shape
 MeterStyle=Set.TextBox:S
 Group=Measure
+Hidden=1
+Type=Int|0|5
 Y=([Option07:Y]-#Set.P#+(-30/2+8)*[Set.S])
 [Value07]
 Meter=String
 Text=#Stroke#
 Group=Measure
+Hidden=1
 MeterStyle=Set.String:S | Set.Value:S
 
 [Circle]
 Meter=Shape
 MeterStyle=Set.Bool:S
 Group=Graph
+Hidden=1
 Y=([Option08:Y]-#Set.P#+(-20/2+8)*[Set.S])
 
 [LineWidth]
 Meter=Shape
 MeterStyle=Set.TextBox:S
 Group=Graph
+Hidden=1
+Type=Int|0|20
 Y=([Option09:Y]-#Set.P#+(-30/2+8)*[Set.S])
 [Value09]
 Meter=String
 Text=#LineWidth#
 Group=Graph
+Hidden=1
 MeterStyle=Set.String:S | Set.Value:S
 
 
@@ -512,10 +552,12 @@ MeterStyle=Set.String:S | Set.Value:S
 Meter=Shape
 MeterStyle=Set.Bool:S
 Group=Tech
+Hidden=1
 Y=([Option11:Y]-#Set.P#+(-20/2+8)*[Set.S])
 
 [Runic]
 Meter=Shape
 MeterStyle=Set.Bool:S
 Group=Tech
+Hidden=1
 Y=([Option12:Y]-#Set.P#+(-20/2+8)*[Set.S])

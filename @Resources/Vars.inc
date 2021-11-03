@@ -1,7 +1,7 @@
 [Variables]
 Scale=1
 ;I H
-2412=H
+2412=I
 
 ColorMode=1
 MainColor=12,12,12
@@ -18,7 +18,7 @@ ArcEnd=30
 ShowDetails=0
 Runic=0
 ;Smart Options
-Align=Left
+Align=Center
 Weather=1
 Date=1
 DateTimeRatio=0.14
@@ -52,6 +52,6 @@ WeatherUnits=Metric
 ; The units of the weather info. Valid values are "Metric" and "Imperial".
 Language=en
 
-Cache.Wallpaper=C:\Users\enhan\Pictures\Graphics\!Logo\Wallpaper.png
-Img.W=1920
-Img.H=1080
+Cache.Wallpaper=[WallpaperPath]
+Img.W=3840
+Img.H=2127

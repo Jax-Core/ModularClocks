@@ -158,6 +158,15 @@ Container=ContentContainer
 Meter=Shape
 MeterStyle=Set.Div:S
 Group=Blur
+[Option14]
+Meter=String
+X=r
+Y=(15*[Set.S])R
+FontSize=(10*[Set.S])
+Text=Regenerate Blur
+MeterStyle=Set.String:S
+Group=Blur
+Container=ContentContainer
 
 [Option21]
 Meter=String
@@ -256,6 +265,18 @@ Meter=String
 Text=#BlurRadius#
 Group=Blur
 MeterStyle=Set.String:S | Set.Value:S
+
+[Button14]
+Meter=Shape
+MeterStyle=Set.Button:S
+Y=([Option14:Y]-#Set.P#+(-30/2+8)*[Set.S])
+Act=[!WriteKeyValue Variables Cache.Wallpaper "[WallpaperPath]" "#SKINSPATH##Skin.Name#\@Resources\Vars.inc"][!UpdateMeasure MM "#Skin.Name#\Main"][!CommandMeasure MM "Reload Image" "#Skin.Name#\Main"][!Delay 100 "#Skin.Name#\Main"][!CommandMeasure mWH "Dimensions" "#Skin.Name#\Main"]
+[Value14]
+Meter=String
+Text=Start
+Group=Blur
+MeterStyle=Set.String:S | Set.Value:S
+
 
 ;===========================
 
