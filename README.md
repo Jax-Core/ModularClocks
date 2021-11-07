@@ -17,7 +17,7 @@ A gallery of hand-crafted rainmeter clocks with built in preview and settings me
 <img src="https://github.com/EnhancedJax/ModularClocks/blob/main/%40Resources/Images/Preview/Fullscale/Smart.png"/>
 
 ## Features
-- Blur / shadow / chameleon fill
+- Blur / shadow / color fill
 - Auto-centering
 - Animated clocks
 

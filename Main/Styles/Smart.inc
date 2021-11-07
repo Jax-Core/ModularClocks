@@ -16,6 +16,8 @@ RegexpSubstitute=1
 [mDate]
 Measure=Time
 Format=%A, %B %d
+[String:S]
+FontColor=#TintColor#
 
 [Time]
 Meter=String
@@ -31,7 +33,11 @@ W=(50*#Scale#*#Weather#)
 H=(50*#Scale#*#Weather#)
 ImageName=#@#Icons\JD Weather Icons\[mCurrentIcon].png
 DynamicVariables=1
-MeterStyle=Wea#Align#
+MeterStyle=Wea#Align# | WeaTint#TintIcon#
+[WeaTint0]
+[WeaTint1]
+Greyscale=1
+ImageTint=#TintColor#
 
 [WeatherText]
 Meter=String

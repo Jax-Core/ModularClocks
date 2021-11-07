@@ -8,7 +8,7 @@ SkinHeight=#SH#
 
 [Variables]
 ; @includeWeather=#@#Includes\GlobalWeather.inc
-SW=((500+250*#Showdetails#)*#Scale#)
+SW=((500+250)*#Scale#)
 SH=(500*#Scale#)
 Arc1.Start=([mSec]/60*110)
 Arc1.End=(#Arc1.Start#+140)
