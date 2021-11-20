@@ -6,10 +6,7 @@
 
 A gallery of hand-crafted rainmeter clocks with built in preview and settings menu. Download rainmeter [here](https://www.rainmeter.net/).
 
-## ArcTech - 1.2 update 
-<img src="https://github.com/EnhancedJax/-JaxCore/blob/main/%40Resources/Images/Unified/Splashes/ModularClocksTech.png"/>
-
-## 1.1 Styles
+## Styles Previews
 <img src="https://github.com/EnhancedJax/ModularClocks/blob/main/%40Resources/Images/Preview/Fullscale/Measure.png"/>
 <img src="https://github.com/EnhancedJax/ModularClocks/blob/main/%40Resources/Images/Preview/Fullscale/Text.png"/>
 <img src="https://github.com/EnhancedJax/ModularClocks/blob/main/%40Resources/Images/Preview/Fullscale/Center.png"/>
