@@ -1,7 +1,7 @@
 [Variables]
 Sec.SaveLocation=#SKINSPATH##Skin.Name#\Main\Styles\Vars\#Style#.inc
 Sec.SaveLocation2=#SKINSPATH##Skin.Name#\@Resources\Vars.inc
-VersionPage=1
+VersionPage=2
 
 [Export:M]
 Measure=String

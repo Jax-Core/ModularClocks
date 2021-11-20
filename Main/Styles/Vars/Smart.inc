@@ -13,3 +13,4 @@ WeatherLocation=Hong Kong
 WeatherUnits=Metric
 ; The units of the weather info. Valid values are "Metric" and "Imperial".
 Language=en
+Scale=1

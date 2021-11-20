@@ -29,8 +29,9 @@ MeterStyle=String:S | Time#Align#
 [WeatherIcon]
 Meter=Image
 Y=R
-W=(50*#Scale#*#Weather#)
-H=(50*#Scale#*#Weather#)
+W=(50*#Scale#)
+H=(50*#Scale#)
+Hidden=(1-#Weather#)
 ImageName=#@#Icons\JD Weather Icons\[mCurrentIcon].png
 DynamicVariables=1
 MeterStyle=Wea#Align# | WeaTint#TintIcon#
@@ -74,7 +75,7 @@ StringAlign=Right
 [WeaLeft]
 X=0
 [WeaCenter]
-X=(-([WeatherText:W]+50)/2*#Scale#+#CURRENTCONFIGWIDTH#/2)
+X=(-([WeatherText:W]+50*#Scale#)/2+#CURRENTCONFIGWIDTH#/2)
 [WeaRight]
 X=(#SW#-[#CURRENTSECTION#:W])
 

@@ -3,11 +3,11 @@ Scale=1
 ;I H
 2412=I
 
-ColorMode=1
-MainColor=255,255,255
-OppositeColor=12,12,12
+ColorMode=0
+MainColor=12,12,12
+OppositeColor=255,255,255
 
-Style=Measure
+Style=Light
 
 Rm.Update=25
 Render=Color

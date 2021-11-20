@@ -19,10 +19,12 @@ Measure=Time
 Format=%Y | %m | %d
 [mWeekday]
 Measure=Time
-Format=%A 
+Format=%A
+FormatLocale=Local
 [mTimeZone]
 Measure=Time
 Format=%Z
+FormatLocale=Local
 [mHour]
 Measure=Time
 Format=%I
@@ -48,13 +50,14 @@ MeasureName=mWeekday
 FontSize=(60*#scale#)
 InlineSetting=CharacterSpacing | 2 | 2
 MeterStyle=String:S
+FontColor=#Primarycolor#,#PrimaryOpacity#
 
 [BarShape]
 Meter=Shape
 X=0
 Y=(10*#scale#)R
-Shape=Line 0,0,465,0 | StrokeColor #FC# |  StrokeWidth 2 | StrokeStartCap Round | StrokeEndCap Round | Scale #Scale#,1,0,0
-Shape2=Ellipse (480*#scale#),0,4 | Fill Color #FC# | StrokeWidth 0 | Scale #Scale#,#Scale#
+Shape=Line 0,0,465,0 | StrokeColor #Primarycolor#,#PrimaryOpacity# |  StrokeWidth 2 | StrokeStartCap Round | StrokeEndCap Round | Scale #Scale#,1,0,0
+Shape2=Ellipse (480*#scale#),0,4 | Fill Color #Primarycolor#,#PrimaryOpacity# | StrokeWidth 0 | Scale #Scale#,#Scale#
 
 [WeatherText]
 Meter=String
@@ -72,6 +75,7 @@ MeasureName=mHour
 MeasureName2=mMinHead
 Measurename3=mMinTail
 MeasureName4=mTimeZone
+FontColor=#Primarycolor#,#PrimaryOpacity#
 
 [DateText]
 Meter=String
@@ -82,3 +86,4 @@ FontSize=(10*#scale#)
 Text=%1
 MeasureName=mDate
 DynamicVariables=1
+FontColor=#Primarycolor#,#PrimaryOpacity#
