@@ -72,10 +72,10 @@ Y=([Option04:Y]-#Set.P#+(-35/2+8)*[Set.S])
 [ColorMode:0]
 Meter=String
 Text=Dark
-FontColor=(#ColorMode# = 0 ? 0 : 255),(#ColorMode# = 0 ? 0 : 255),(#ColorMode# = 0 ? 0 : 255)
+FontColor=[&Func:returnBool('ColorMode', '1', '#Set.Text_Color#', '#Set.Pri_color#')]
 MeterStyle=Set.String:S | Set.PickOption_0:S
 [ColorMode:1]
 Meter=String
 Text=Light
-FontColor=(#ColorMode# = 1 ? 0 : 255),(#ColorMode# = 1 ? 0 : 255),(#ColorMode# = 1 ? 0 : 255)
+FontColor=[&Func:returnBool('ColorMode', '0', '#Set.Text_Color#', '#Set.Pri_color#')]
 MeterStyle=Set.String:S | Set.PickOption_1:S

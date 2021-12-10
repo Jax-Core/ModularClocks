@@ -4,16 +4,11 @@ Update=-1
 [Variables]
 BarHandler=6
 Scroll=0
+Sec.AnchorName=AnchorSuppli
 
 [LaunchVis]
 Measure=Calc
 onupdateaction=[!Delay 500][!EnableMeasureGroup NUOL]
-
-[DefaultStartActions]
-Custom2=[!SetOption AnchorSuppli Y [AnchorSuppli:Y]][!UpdateMeter AnchorSuppli][!UpdateMeterGroup PReload][!SHowMeterGroup V#VersionPage#][!UpdateMeter *][!Redraw]
-[ContentContainer]
-MouseScrollDownAction=[!SetVariable Scroll "(Clamp(#Scroll#-50,Clamp(#Set.H#-#Set.P#*2-[AnchorSuppli:Y], -1000, 0),0))"][!UpdateMeter *][!Redraw]
-MouseScrollUpAction=[!SetVariable Scroll "(Clamp(#Scroll#+50,Clamp(#Set.H#-#Set.P#*2-[AnchorSuppli:Y], -1000, 0),0))"][!UpdateMeter *][!Redraw]
 
 ;================================================================================================================================================================================
 

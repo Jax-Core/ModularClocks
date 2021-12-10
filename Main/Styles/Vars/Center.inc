@@ -1,3 +1,3 @@
 [Variables]
-PrimaryColor=255,255,255
+PrimaryColor=38,38,37
 PrimaryOpacity=255

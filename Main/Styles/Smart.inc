@@ -16,6 +16,7 @@ RegexpSubstitute=1
 [mDate]
 Measure=Time
 Format=%A, %B %d
+FormatLocale=Local
 [String:S]
 FontColor=#TintColor#
 

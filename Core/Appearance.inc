@@ -1,7 +1,8 @@
 [Variables]
 Sec.SaveLocation=#SKINSPATH##Skin.Name#\Main\Styles\Vars\#Style#.inc
 Sec.SaveLocation2=#SKINSPATH##Skin.Name#\@Resources\Vars.inc
-VersionPage=2
+VersionPage=1
+Sec.AnchorName=AnchorSuppli
 
 [Export:M]
 Measure=String
@@ -9,10 +10,7 @@ OnUpdateAction=[!SetOption #Style# MeterStyle "Box:Selected"][!UpdateMeter #Styl
 
 
 [DefaultStartActions]
-Custom2=[!UpdateMeterGroup PReload][!SHowMeterGroup V#VersionPage#][!UpdateMeter *][!Redraw][!SetOption AnchorSuppli Y [AnchorSuppli:Y]][!UpdateMeter AnchorSuppli][!Redraw]
-[ContentContainer]
-MouseScrollDownAction=[!SetVariable Scroll "(Clamp(#Scroll#-50,Clamp(#Set.H#-#Set.P#*2-[AnchorSuppli:Y], -1000, 0),0))"][!UpdateMeter *][!Redraw]
-MouseScrollUpAction=[!SetVariable Scroll "(Clamp(#Scroll#+50,Clamp(#Set.H#-#Set.P#*2-[AnchorSuppli:Y], -1000, 0),0))"][!UpdateMeter *][!Redraw]
+Custom2=[!UpdateMeterGroup PReload][!SHowMeterGroup V#VersionPage#][!UpdateMeter *][!Redraw]
 
 [Input2:M]
 Measure=Plugin
@@ -53,9 +51,9 @@ MeterStyle=Set.String:S | Set.OptionCat:S
 
 [Box]
 Shape=Rectangle  0,0,(([ContentContainer:W]-120*[Set.S])/5),(([ContentContainer:W]-120*[Set.S])/5),#set.R# | StrokeWidth 0 | Extend Fill
-Fill=Fill Color 255,255,255,10
-MouseOverAction=[!SetOption #CURRENTSECTION# Fill "Fill Color 255,255,255,150"][!UpdateMeter #CURRENTSECTION#][!Redraw]
-MouseLeaveAction=[!SetOption #CURRENTSECTION# Fill "Fill Color 255,255,255,10"][!UpdateMeter #CURRENTSECTION#][!Redraw]
+Fill=Fill Color #Set.Text_Color#,10
+MouseOverAction=[!SetOption #CURRENTSECTION# Fill "Fill Color #Set.Text_Color#,150"][!UpdateMeter #CURRENTSECTION#][!Redraw]
+MouseLeaveAction=[!SetOption #CURRENTSECTION# Fill "Fill Color #Set.Text_Color#,10"][!UpdateMeter #CURRENTSECTION#][!Redraw]
 Leftmouseupaction=[!WriteKeyValue Variables Style #CURRENTSECTION# "#Sec.SaveLocation2#"][!Refresh][!UpdateMeasure Auto_Refresh:M]
 DynamicVariables=1
 Container=ContentContainer
@@ -63,7 +61,7 @@ Group=Preload
 Hidden=1
 [Box:Selected]
 Shape=Rectangle  0,0,(([ContentContainer:W]-120*[Set.S])/5),(([ContentContainer:W]-120*[Set.S])/5),#set.R# | StrokeWidth 0 | Extend Fill
-Fill=Fill Color 255,255,255,80
+Fill=Fill Color #Set.Text_Color#,80
 DynamicVariables=1
 Container=ContentContainer
 Group=Preload
@@ -192,10 +190,10 @@ MeterStyle=CircTechPreview
 
 [VersionBox]
 Shape=Rectangle 0,0,(([ContentContainer:W]-60*[Set.S])/2),(30*[Set.S]),(10/2) | StrokeWidth 0 | Extend Fill
-Fill=Fill Color 255,255,255,10
+Fill=Fill Color #Set.Text_Color#,10
 DynamicVariables=1
-MouseOverAction=[!SetOption #CURRENTSECTION# Fill "Fill Color 255,255,255,150"][!UpdateMeter #CURRENTSECTION#][!Redraw]
-MouseLeaveAction=[!SetOption #CURRENTSECTION# Fill "Fill Color 255,255,255,10"][!UpdateMeter #CURRENTSECTION#][!Redraw]
+MouseOverAction=[!SetOption #CURRENTSECTION# Fill "Fill Color #Set.Text_Color#,150"][!UpdateMeter #CURRENTSECTION#][!Redraw]
+MouseLeaveAction=[!SetOption #CURRENTSECTION# Fill "Fill Color #Set.Text_Color#,10"][!UpdateMeter #CURRENTSECTION#][!Redraw]
 Container=ContentContainer
 Group=VersionBox
 [Ver1]

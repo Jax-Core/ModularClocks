@@ -7,14 +7,14 @@ ColorMode=0
 MainColor=12,12,12
 OppositeColor=255,255,255
 
-Style=Light
+Style=Center
 
 Rm.Update=25
 Render=Color
 
 ;RenderBlur (Brightness, Saturation, Hue)
-BlurModulate=150,100,100
-BlurRadius=10
+BlurModulate=75,100,100
+BlurRadius=5
 BlurSigma=2
 
 ;RenderShadow
@@ -26,5 +26,5 @@ ShadowOffset=0,0
 ; BarBackpacity=150
 
 Cache.Wallpaper=[WallpaperPath]
-Img.W=3840
-Img.H=2127
+Img.W=1920
+Img.H=1080
