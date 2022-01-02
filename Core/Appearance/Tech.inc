@@ -24,3 +24,15 @@ Y=([Option11:Y]-#Set.P#+(-20/2+8)*[Set.S])
 Meter=Shape
 MeterStyle=Set.Bool:S
 Y=([Option12:Y]-#Set.P#+(-20/2+8)*[Set.S])
+
+
+; ---------------------------------------------------------------------------- ;
+;                                    Anchor                                    ;
+; ---------------------------------------------------------------------------- ;
+
+
+[AnchorSuppli]
+Meter=String
+Container=ContentContainer
+x=r
+Y=R

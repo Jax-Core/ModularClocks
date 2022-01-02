@@ -79,3 +79,14 @@ Meter=String
 Text=Light
 FontColor=[&Func:returnBool('ColorMode', '0', '#Set.Text_Color#', '#Set.Pri_color#')]
 MeterStyle=Set.String:S | Set.PickOption_1:S
+
+; ---------------------------------------------------------------------------- ;
+;                                    Anchor                                    ;
+; ---------------------------------------------------------------------------- ;
+
+
+[AnchorSuppli]
+Meter=String
+Container=ContentContainer
+x=r
+Y=R

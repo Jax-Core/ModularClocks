@@ -1,1 +1,10 @@
 @Resources\Vars.inc
+Main\Vars\Arc.inc
+Main\Vars\Center.inc
+Main\Vars\CircTech.inc
+Main\Vars\Graph.inc
+Main\Vars\Light.inc
+Main\Vars\Measure.inc
+Main\Vars\Smart.inc
+Main\Vars\Tech.inc
+Main\Vars\Text.inc

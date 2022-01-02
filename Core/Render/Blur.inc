@@ -68,3 +68,14 @@ Act=[!WriteKeyValue Variables Cache.Wallpaper "[WallpaperPath]" "#SKINSPATH##Ski
 Meter=String
 Text=Start
 MeterStyle=Set.String:S | Set.Value:S
+
+; ---------------------------------------------------------------------------- ;
+;                                    Anchor                                    ;
+; ---------------------------------------------------------------------------- ;
+
+
+[AnchorSuppli]
+Meter=String
+Container=ContentContainer
+x=r
+Y=R

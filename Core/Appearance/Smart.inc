@@ -122,3 +122,14 @@ Meter=String
 Text=#WeatherUnits#
 Hidden=(1-#Weather#)
 MeterStyle=Set.String:S | Set.Value:S
+
+; ---------------------------------------------------------------------------- ;
+;                                    Anchor                                    ;
+; ---------------------------------------------------------------------------- ;
+
+
+[AnchorSuppli]
+Meter=String
+Container=ContentContainer
+x=r
+Y=R

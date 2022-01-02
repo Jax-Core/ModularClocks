@@ -90,7 +90,7 @@ This=0 | 0,0,0,150 ; 0.0 | 0,0,0,0 ; 1.0
 
 [Logo]
 Meter=Image
-ImageName=Logo.png
+ImageName=CoreAssets\#Set.IconStyle#Logo.png
 X=#Sec.P#
 Y=(#Sec.H#-#Sec.P#-40)
 W=40
@@ -104,7 +104,6 @@ Container=BC
 H=#Sec.H#
 W=#Sec.L#
 PreserveAspectRatio=2
-Leftmouseupaction=[!Refresh]
 ImageName=#ROOTCONFIG#.png
 
 [Esc]
@@ -136,7 +135,7 @@ MeterStyle=String:S
 
 [Des]
 Meter=String
-Text=Here you can find the list of dependencies. Click on any one of them to install, make sure you are connected to the internet. Refresh this page by clicking on the right.
+Text=Here you can find the list of dependencies. Click on any one of them to install, make sure you are connected to the internet.
 W=(#SEc.W#-#Sec.L#-#Sec.P#*2)
 clipString=2
 MeterStyle=String:S
@@ -199,12 +198,20 @@ Group=Button
 ; ---------------------------------------------------------------------------- ;
 
 [WebParser]
-Measure=WebParser
-URL=https://raw.githubusercontent.com/Jax-Core/JaxCore/main/%40Resources/Version.inc
-RegExp==(.*)$
-FinishAction=[!Delay 1000][!CommandMeasure LogicalScript "check()"]
+Measure=Calc
+
+Formula=40000
+;URL=https://raw.githubusercontent.com/Jax-Core/JaxCore/main/%40Resources/Version.inc
+;RegExp==(.*)$
+OnUpdateAction=[!Delay 1000][!CommandMeasure LogicalScript "check()"]
 OnConnectionErrorAction=[!SetOption Dep1 MeterStyle "Dep.Shape:S | Dep.ShapeNo:S"][!SetOption DepText1 Text "//Failed to connect to JaxCore github, if this is an issue please report to me"][!UpdateMEter *][!Redraw]
 OnRegExpErrorAction=[!Log Developer:RegExpFalse]
+Disabled=1
+
+[WebParserCheck]
+Measure=Calc
+IfCondition=#Parsed# = 1
+IfTrueAction=[!EnableMeasure WebParser][!UpdateMeasure WebParser][!CommandMeasure WebParser "Reset"]
 
 [InternetStatus]
 Measure=PLUGIN

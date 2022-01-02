@@ -29,3 +29,14 @@ Meter=Shape
 MeterStyle=Set.Color:S
 Hidden=(1-[&Func:returnBool('Render', 'Color')])
 Y=([Option07:Y]-#Set.P#+(-30/2+8)*[Set.S])
+
+; ---------------------------------------------------------------------------- ;
+;                                    Anchor                                    ;
+; ---------------------------------------------------------------------------- ;
+
+
+[AnchorSuppli]
+Meter=String
+Container=ContentContainer
+x=r
+Y=R

@@ -38,3 +38,14 @@ Meter=String
 Text=#SecondaryOpacity#
 Hidden=(1-[&Func:returnBool('Render', 'Color')])
 MeterStyle=Set.String:S | Set.Pacity:S
+
+; ---------------------------------------------------------------------------- ;
+;                                    Anchor                                    ;
+; ---------------------------------------------------------------------------- ;
+
+
+[AnchorSuppli]
+Meter=String
+Container=ContentContainer
+x=r
+Y=R

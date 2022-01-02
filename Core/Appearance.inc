@@ -10,7 +10,7 @@ OnUpdateAction=[!SetOption #Style# MeterStyle "Box:Selected"][!UpdateMeter #Styl
 
 
 [DefaultStartActions]
-Custom2=[!UpdateMeterGroup PReload][!SHowMeterGroup V#VersionPage#][!UpdateMeter *][!Redraw]
+Custom1=[!UpdateMeterGroup PReload][!SHowMeterGroup V#VersionPage#][!UpdateMeter *][!Redraw]
 
 [Input2:M]
 Measure=Plugin
@@ -271,13 +271,3 @@ MeterStyle=Set.Div:S
 @includeCore=#SKINSPATH##Skin.Name#\Core\Appearance\#Style#.inc
 
 @includeStyleVars=#SKINSPATH##Skin.Name#\Main\Styles\Vars\#Style#.inc
-; ---------------------------------------------------------------------------- ;
-;                                    Anchor                                    ;
-; ---------------------------------------------------------------------------- ;
-
-
-[AnchorSuppli]
-Meter=String
-Container=ContentContainer
-x=r
-Y=R

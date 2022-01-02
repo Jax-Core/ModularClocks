@@ -7,7 +7,7 @@ ColorMode=0
 MainColor=12,12,12
 OppositeColor=255,255,255
 
-Style=Center
+Style=Measure
 
 Rm.Update=25
 Render=Color
