@@ -90,7 +90,7 @@ This=0 | 0,0,0,150 ; 0.0 | 0,0,0,0 ; 1.0
 
 [Logo]
 Meter=Image
-ImageName=CoreAssets\#Set.IconStyle#Logo.png
+ImageName=Logo.png
 X=#Sec.P#
 Y=(#Sec.H#-#Sec.P#-40)
 W=40
@@ -149,7 +149,7 @@ Y=20R
 MEterStyle=Dep.Shape:S
 [DepText1]
 Meter=String
-Text=JaxCore3 // Checking...
+Text=JaxCore // Checking...
 MeterStyle=Dep.Text:S
 
 [Dep3]
@@ -199,7 +199,6 @@ Group=Button
 
 [WebParser]
 Measure=Calc
-
 Formula=40000
 ;URL=https://raw.githubusercontent.com/Jax-Core/JaxCore/main/%40Resources/Version.inc
 ;RegExp==(.*)$
@@ -221,9 +220,11 @@ IfCondition=InternetStatus = -1
 ifTrueaction=[!SetOption Dep1 MeterStyle "Dep.Shape:S | Dep.ShapeNo:S"][!SetOption DepText1 Text "JaxCore // connection error, please check internet connection"][!UpdateMEter *][!Redraw]
 
 [mVer]
-Measure=WebParser
-URL=[WebParser]
-StringIndex=1
+Measure=Calc
+Formula=40000
+;Measure=WebParser
+;URL=[WebParser]
+;StringIndex=1
 
 [LogicalScript]
 Measure=Script
@@ -233,10 +234,10 @@ ScriptFile=Logic.lua
 Measure=String
 Group=NUOL
 Disabled=1
-OnUpdateAction=[!SetOption Dep1 MeterStyle "Dep.Shape:S | Dep.ShapeYes:S"][!SetOption DepText1 Text "JaxCore3 // v#Core.Ver# installed"][!ShowMeterGroup Button][!UpdateMEter *][!Redraw]
+OnUpdateAction=[!SetOption Dep1 MeterStyle "Dep.Shape:S | Dep.ShapeYes:S"][!SetOption DepText1 Text "JaxCore // v#Core.Ver# installed"][!ShowMeterGroup Button][!UpdateMEter *][!Redraw]
 
 [JaxCoreNo]
 Measure=String
 Group=NUOL
 Disabled=1
-OnUpdateAction=[!SetOption Dep1 MeterStyle "Dep.Shape:S | Dep.ShapeNo:S"][!SetOption DepText1 Text "JaxCore3 // click here to install"][!SetOption Dep1 Leftmouseupaction """["#@#Actions\AHKv1.exe" "#@#Actions\Installer.ahk"][!SetOption DepText1 Text "JaxCore3 // download here if it doesn't automatically install"][!SetOption Dep1 Leftmouseupaction """["https://github.com/Jax-Core/JaxCore/releases/latest"][!UpdateMEter *][!Redraw]"""][!UpdateMEter *][!Redraw]"""][!UpdateMEter *][!Redraw]
+OnUpdateAction=[!SetOption Dep1 MeterStyle "Dep.Shape:S | Dep.ShapeNo:S"][!SetOption DepText1 Text "JaxCore // click here to install"][!SetOption Dep1 Leftmouseupaction """["#@#Actions\AHKv1.exe" "#@#Actions\Installer.ahk"][!SetOption DepText1 Text "JaxCore // download here if it doesn't automatically install"][!SetOption Dep1 Leftmouseupaction """["https://github.com/Jax-Core/JaxCore/releases/latest"][!UpdateMEter *][!Redraw]"""][!UpdateMEter *][!Redraw]"""][!UpdateMEter *][!Redraw]
