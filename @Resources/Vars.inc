@@ -7,10 +7,10 @@ ColorMode=0
 MainColor=12,12,12
 OppositeColor=255,255,255
 
-Style=Measure
+Style=Smart
 
 Rm.Update=25
-Render=Color
+Render=Shadow
 
 ;RenderBlur (Brightness, Saturation, Hue)
 BlurModulate=75,100,100
