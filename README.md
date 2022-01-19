@@ -33,7 +33,12 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#setting-up">Styles Setup</a></li>
+        <li><a href="#setting-up">Styles Setup</a>
+          <ul>
+           <li><a href="#installing-imagemagick">Installing ImageMagick</a></li>
+        <li><a href="#choosing-presets">Choosing Presets</a>
+          </ul>
+        </li>
       </ul>
     </li>
     <li> <a href="#help-and-credits">Help & Credits</a></li>
