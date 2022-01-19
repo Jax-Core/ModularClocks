@@ -8,7 +8,7 @@
 <h3 align="center">ModularClocks</h3>
 
   <p align="center">
-    Stylized screensavers.
+    Animated & Modern Clock Styles.
     <br />
     <a href="https://www.deviantart.com/jaxoriginals/art/ModularClocks-v2-1-883898019"><strong>More Info »</strong></a>
     <br />
