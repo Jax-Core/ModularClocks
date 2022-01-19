@@ -79,7 +79,7 @@ Assuming you successfully downloaded and installed Rainmeter as well as JaxCore,
 
 ### Setting Up
 
-To use the custom clock styles, you must first install and configure **[ImageMagick](https://github.com/khanhas/MagickMeter).** If you already have ImageMagick setup you can skip to choosing the presets; if not, follow the instructions below to setup **ImageMagick**.
+To use the custom clock styles, you must first install and configure **[ImageMagick](https://github.com/khanhas/MagickMeter).** If you already have **ImageMagick** setup you can skip to choosing the presets; if not, follow the instructions below to setup **ImageMagick**.
 
 
 #### Installing ImageMagick:
