@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Jax-Core/ModularClocks">
-    <img src="" alt="Logo" width="200" height="200">
+    <img src="https://i.imgur.com/716pCXy.png" alt="Logo" width="200" height="200">
   </a>
 
 <h3 align="center">ModularClocks</h3>
@@ -49,7 +49,6 @@
 ModularClocks is a Rainmeter skin that includes a gallery of hand-crafted rainmeter clocks, a preview option, and an efficient settings menu.
 
 
-
 ## Features
 
 * 5 Clock Presets
@@ -75,17 +74,18 @@ Assuming you successfully downloaded and installed Rainmeter as well as JaxCore,
 
 ### Setting Up
 
-To use video the custom clock styles, you must first install and configure [ImageMagick](https://github.com/khanhas/MagickMeter).** Follow the instructions below to setup **ImageMagick**.
+To use video the custom clock styles, you must first install and configure **[ImageMagick](https://github.com/khanhas/MagickMeter).** Follow the instructions below to setup **ImageMagick**.
 
 
 #### Installing ImageMagick:
 
-1. Open [this link](https://www.imagemagick.org/script/download.php#windows). This link will take you to another site where you must locate and download the appropriate installer.
+1. Open **[this link](https://www.imagemagick.org/script/download.php#windows)**. This link will take you to another site where you must locate and download the appropriate installer.
 2. Find a suitable release under **Windows Binary Release** that corresponds to your requirements and download it. The `ImageMagick-7.1.0-19-Q16-HDRI-x64-dll.exe` executable will be used to install for this guide.
 3. After the download is complete, run the installer, which in this case is `ImageMagick-7.1.0-19-Q16-HDRI-x64-dll.exe`.
 4. Leave the installation settings at their defaults and follow through the installation. You can tinker around with the settings **ONLY** if you know what they do.
-5. Open [this link](https://github.com/khanhas/MagickMeter/releases) and dowload the latest release of the **MagickMeter** skin. The `magickmeter_0.7.3.rmskin` Rainmeter skin file will be used to install for this guide. 
+5. Open **[this link](https://github.com/khanhas/MagickMeter/releases)** and dowload the latest release of the **MagickMeter** skin. The `magickmeter_0.7.3.rmskin` Rainmeter skin file will be used to install for this guide. 
 6. Leave the installation settings at their defaults and click Install.
+
 And that is how you setup **ImageMagick**. You can now proceed to configure the Clock Presets.
 
 * **Note:** An alternate approach for **Step 5** and **Step 6** is:
