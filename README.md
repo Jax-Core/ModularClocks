@@ -74,7 +74,7 @@ Assuming you successfully downloaded and installed Rainmeter as well as JaxCore,
 
 ### Setting Up
 
-To use video the custom clock styles, you must first install and configure **[ImageMagick](https://github.com/khanhas/MagickMeter).** Follow the instructions below to setup **ImageMagick**.
+To use the custom clock styles, you must first install and configure **[ImageMagick](https://github.com/khanhas/MagickMeter).** Follow the instructions below to setup **ImageMagick**.
 
 
 #### Installing ImageMagick:
@@ -85,6 +85,7 @@ To use video the custom clock styles, you must first install and configure **[Im
 4. Leave the installation settings at their defaults and follow through the installation. You can tinker around with the settings **ONLY** if you know what they do.
 5. Open **[this link](https://github.com/khanhas/MagickMeter/releases)** and dowload the latest release of the **MagickMeter** skin. The `magickmeter_0.7.3.rmskin` Rainmeter skin file will be used to install for this guide. 
 6. Leave the installation settings at their defaults and click Install.
+7. Restart Rainmeter and your plugin will be activated.
 
 And that is how you setup **ImageMagick**. You can now proceed to configure the Clock Presets.
 
@@ -96,9 +97,9 @@ And that is how you setup **ImageMagick**. You can now proceed to configure the 
   - Finally, restart Rainmeter and your plugin will be activated.
 
 #### Choosing Presets:
-Follow the steps outlined below to setup custom video backgrounds:
+Follow the steps outlined below to setup custom clock presets:
 
-1. Open Core and head over to the **Modules** section.
+1. Open Core and head over to the **Desktop** section.
 2. Select **ModularClocks** from the list and proceed to the **Appearance** tab.
 3. Under **Clock Style** choose a preset that tickles your fancy.
 4. The clock style will be changed if you refresh **ModularClocks** by deactivating and activating the toggle on the bottom left.
