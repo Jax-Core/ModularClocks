@@ -1,4 +1,6 @@
 [Variables]
+@includegVar2=#SKINSPATH##JaxCore\@Resources\gVars\Weather.inc
+@includegVar3=#SKINSPATH##JaxCore\@Resources\gVars\WeatherAPIKey.inc
 Align=Center
 Weather=1
 Date=1
@@ -7,10 +9,4 @@ Seperator=:
 TintColor=255,255,255
 TintIcon=0
 
-WeatherLocation=Hong Kong
-; Just enter your city's name or your address here or whatever. Anything should work here.
-; TIP: Check Rainmeter's log to see what location it got.
-WeatherUnits=Metric
-; The units of the weather info. Valid values are "Metric" and "Imperial".
-Language=en
 Scale=1

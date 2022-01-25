@@ -63,12 +63,20 @@ MeterStyle=Set.String:S | Set.Value:S
 Meter=Shape
 MeterStyle=Set.Button:S
 Y=([Option14:Y]-#Set.P#+(-30/2+8)*[Set.S])
+Overcolor=#Set.Positive_color#,150
+leaveColor=#Set.Positive_color#,50
 Act=[!WriteKeyValue Variables Cache.Wallpaper "[WallpaperPath]" "#SKINSPATH##Skin.Name#\@Resources\Vars.inc"][!UpdateMeasure MM "#Skin.Name#\Main"][!CommandMeasure MM "Reload Image" "#Skin.Name#\Main"][!Delay 100 "#Skin.Name#\Main"][!CommandMeasure mWH "Dimensions" "#Skin.Name#\Main"]
 [Value14]
 Meter=String
 Text=Start
 MeterStyle=Set.String:S | Set.Value:S
 
+[WallpaperPath]
+Measure=Registry
+RegHKey=HKEY_CURRENT_USER
+RegKey=Control Panel\Desktop
+RegValue=Wallpaper
+UpdateDivider=-1
 ; ---------------------------------------------------------------------------- ;
 ;                                    Anchor                                    ;
 ; ---------------------------------------------------------------------------- ;

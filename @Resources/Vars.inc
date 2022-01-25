@@ -1,16 +1,14 @@
 [Variables]
 Scale=1
-;I H
-2412=I
 
 ColorMode=0
 MainColor=12,12,12
 OppositeColor=255,255,255
 
-Style=Smart
+Style=Measure
 
 Rm.Update=25
-Render=Shadow
+Render=Blur
 
 ;RenderBlur (Brightness, Saturation, Hue)
 BlurModulate=75,100,100
@@ -25,6 +23,6 @@ ShadowOffset=0,0
 ;RenderBar
 ; BarBackpacity=150
 
-Cache.Wallpaper=[WallpaperPath]
-Img.W=1920
-Img.H=1080
+Cache.Wallpaper=C:\Users\enhan\Pictures\Graphics\Wallpapers\Red.png
+Img.W=3840
+Img.H=2160

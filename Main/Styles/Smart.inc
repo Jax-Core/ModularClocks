@@ -11,7 +11,7 @@ SH=(500*#Scale#)
 
 [mTime]
 Measure=Time
-Format=%##2412##Seperator#%M
+Format=%##gVar.2412##Seperator#%M
 RegexpSubstitute=1
 [mDate]
 Measure=Time

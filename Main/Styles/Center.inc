@@ -11,7 +11,7 @@ SW=(500*#Scale#)
 
 [mHour]
 Measure=Time
-Format=%#2412#
+Format=%#gVar.2412#
 [mMin]
 Measure=Time
 Format=%M

@@ -24,7 +24,7 @@ Formula=(mLoop > 0.995 ? 0 : mLoop + 0.005)
 UpdateDivider=1
 [mHour]
 Measure=Time
-Format=%#2412#%M
+Format=%#gVar.2412#%M
 UpdateDivider=1
 [mSecA]
 Measure=Time

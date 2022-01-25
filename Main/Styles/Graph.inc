@@ -15,7 +15,7 @@ StartEnd=(50*#Scale#)
 
 [mHour]
 Measure=Time
-Format=%#2412#
+Format=%#gVar.2412#
 AverageSize=12
 UpdateDivider=(1000/#Rm.Update#)
 [mMinA]

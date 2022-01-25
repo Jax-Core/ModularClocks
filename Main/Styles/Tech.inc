@@ -16,7 +16,7 @@ FontFace=a Astro Space
 
 [mTime]
 Measure=Time
-Format=%#2412#%M
+Format=%#gVar.2412#%M
 DynamicVariables=1
 UpdateDivider=(1000/#Rm.Update#)
 [mSecA]

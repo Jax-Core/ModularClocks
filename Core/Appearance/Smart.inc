@@ -28,7 +28,7 @@ Meter=Shape
 MeterStyle=Set.Div:S
 [Option07]
 Meter=String
-Text=Tint icon color?
+Text=Tint icon's color
 MeterStyle=Set.String:S | Set.OptionName:S
 [Divider1920328]
 Meter=Shape
@@ -36,24 +36,6 @@ MeterStyle=Set.Div:S
 [Option03]
 Meter=String
 Text=Weather
-MeterStyle=Set.String:S | Set.OptionName:S
-[19283019278301]
-Meter=Shape
-Hidden=(1-#Weather#)
-MeterStyle=Set.Div:S
-[Option11]
-Meter=String
-Text=Weather location
-Hidden=(1-#Weather#)
-MeterStyle=Set.String:S | Set.OptionName:S
-[Divider19w2s0328]
-Meter=Shape
-Hidden=(1-#Weather#)
-MeterStyle=Set.Div:S
-[Option12]
-Meter=String
-Text=Unit (Metric/Imperial)
-Hidden=(1-#Weather#)
 MeterStyle=Set.String:S | Set.OptionName:S
 
 ; ---------------------------------------------------------------------------- ;
@@ -68,11 +50,6 @@ Y=([Option02:Y]-#Set.P#+(-30/2+8)*[Set.S])
 Meter=String
 Text=#Align#
 MeterStyle=Set.String:S | Set.Value:S
-
-[Weather]
-Meter=Shape
-MeterStyle=Set.Bool:S
-Y=([Option03:Y]-#Set.P#+(-20/2+8)*[Set.S])
 
 [Date]
 Meter=Shape
@@ -99,29 +76,10 @@ Meter=String
 Text=#DateTimeRatio#
 MeterStyle=Set.String:S | Set.Value:S
 
-[WeatherLocation]
+[Weather]
 Meter=Shape
-MeterStyle=Set.Textbox:S
-Y=([Option11:Y]-#Set.P#+(-30/2+8)*[Set.S])
-Hidden=(1-#Weather#)
-Type=Txt
-[Value11]
-Meter=String
-Text=#WeatherLocation#
-Hidden=(1-#Weather#)
-MeterStyle=Set.String:S | Set.Value:S
-
-[WeatherUnits]
-Meter=Shape
-MeterStyle=Set.Textbox:S
-Type=Txt
-Hidden=(1-#Weather#)
-Y=([Option12:Y]-#Set.P#+(-30/2+8)*[Set.S])
-[Value12]
-Meter=String
-Text=#WeatherUnits#
-Hidden=(1-#Weather#)
-MeterStyle=Set.String:S | Set.Value:S
+MeterStyle=Set.Bool:S
+Y=([Option03:Y]-#Set.P#+(-20/2+8)*[Set.S])
 
 ; ---------------------------------------------------------------------------- ;
 ;                                    Anchor                                    ;
