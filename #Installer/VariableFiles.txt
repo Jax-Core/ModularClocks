@@ -1,9 +1,0 @@
-@Resources\Vars.inc
-Main\Styles\Vars\Arc.inc
-Main\Styles\Vars\Center.inc
-Main\Styles\Vars\Graph.inc
-Main\Styles\Vars\Light.inc
-Main\Styles\Vars\Measure.inc
-Main\Styles\Vars\Smart.inc
-Main\Styles\Vars\Tech.inc
-Main\Styles\Vars\Text.inc
