@@ -2,7 +2,8 @@
 
 [Export:M]
 Measure=String
-OnUpdateAction=[!SetOption #Style# MeterStyle "Box:Selected"][!UpdateMeter #Style#][!Redraw]
+OnUpdateAction=[!SetOption #Style# MeterStyle "Box:Selected"][!UpdateMeter #Style#][!UpdateMeterGroup Preload][!UpdateMeterGroup PreviewImages][!SHowMeterGroup Preload][!ShowMeterGroup PreviewImages]
+
 ; ---------------------------------------------------------------------------- ;
 ;                             Pre-definted options                             ;
 ; ---------------------------------------------------------------------------- ;
@@ -35,67 +36,60 @@ Leftmouseupaction=[!WriteKeyValue Variables Style #CURRENTSECTION# "#Sec.SaveLoc
 DynamicVariables=1
 Container=ContentContainer
 Group=Preload
+Hidden=1
 [Box:Selected]
 Shape=Rectangle  0,0,(([ContentContainer:W]-120*[Set.S])/5),(([ContentContainer:W]-120*[Set.S])/5),#set.R# | StrokeWidth 0 | Extend Fill
 Fill=Fill Color #Set.Text_Color#,80
 DynamicVariables=1
 Container=ContentContainer
 Group=Preload
+Hidden=1
 [Center]
 Meter=Shape
 X=r
 Y=(20*[Set.S])R
 MeterStyle=Box
-Group=V1
 [Measure]
 Meter=Shape
 X=(20*[Set.S])R
 Y=r
 MeterStyle=Box
-Group=V1
 [Graph]
 Meter=Shape
 X=(20*[Set.S])R
 Y=r
 MeterStyle=Box
-Group=V1
 [Smart]
 Meter=Shape
 X=(20*[Set.S])R
 Y=r
 MeterStyle=Box
-Group=V1
 [Text]
 Meter=Shape
 X=(20*[Set.S])R
 Y=r
 MeterStyle=Box
-Group=V1
 
 [CircTech]
 Meter=Shape
 X=(30*[Set.S])
 Y=(20*[Set.S])R
 MeterStyle=Box
-Group=V2
 [Tech]
 Meter=Shape
 X=(20*[Set.S])R
 Y=r
 MeterStyle=Box
-Group=V2
 [Arc]
 Meter=Shape
 X=(20*[Set.S])R
 Y=r
 MeterStyle=Box
-Group=V2
 [Light]
 Meter=Shape
 X=(20*[Set.S])R
 Y=r
 MeterStyle=Box
-Group=V2
 
 [CenterPreview]
 Meter=Image
@@ -106,7 +100,8 @@ W=(([ContentContainer:W]-120*[Set.S])/5)
 H=(([ContentContainer:W]-120*[Set.S])/5)
 Solidcolor=0,0,0,1
 DynamicVariables=1
-Group=V1
+Group=PreviewImages
+Hidden=1
 
 [MeasurePreview]
 Meter=Image
@@ -141,7 +136,8 @@ W=(([ContentContainer:W]-120*[Set.S])/5)
 H=(([ContentContainer:W]-120*[Set.S])/5)
 Solidcolor=0,0,0,1
 DynamicVariables=1
-Group=V2
+Group=PreviewImages
+Hidden=1
 
 [TechPreview]
 Meter=Image
