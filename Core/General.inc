@@ -10,12 +10,19 @@ OnUpdateAction=[!SetOption #Style# MeterStyle "Box:Selected"][!UpdateMeter #Styl
 
 [Animations]
 Meter=String
-Text=Animations
+Text=
 MeterStyle=Set.String:S | Set.OptionCat:S
 
 [Option000]
 Meter=String
 Text=Animated update rate
+MeterStyle=Set.String:S | Set.OptionName:S
+[Div:w]
+Meter=Shape
+MeterStyle=Set.Div:S
+[Option0000]
+Meter=String
+Text=Change hour format
 MeterStyle=Set.String:S | Set.OptionName:S
 
 ; ---------------------------------------------------------------------------- ;
@@ -176,4 +183,24 @@ Y=([Option000:Y]-#Set.P#+(-30/2+8)*[Set.S])
 [Value000]
 Meter=String
 Text=#Rm.update#
+MeterStyle=Set.String:S | Set.Value:S
+
+[Button11]
+Meter=Shape
+MeterStyle=Set.Button:S
+Y=([Option0000:Y]-#Set.P#+(-30/2+8)*[Set.S])
+Act=[!WriteKeyvalue Variables Skin.Name """#JaxCore""" "#@#SecVar.inc"][!WriteKeyvalue Variables Skin.Set_Page GlobalVars "#@#SecVar.inc"][!Refresh]
+[Icon11]
+Meter=String
+Text=[\xe895]
+FontFace=Material Icons Round
+FontSize=(14*[Set.S])
+FontColor=#Set.Subtext_Color#
+MeterStyle=Set.String:S | Set.Value:S
+[Value11]
+Meter=String
+X=(-25*[Set.S])r
+Y=r
+Text=Change global variable
+FontColor=#Set.Subtext_Color#
 MeterStyle=Set.String:S | Set.Value:S
