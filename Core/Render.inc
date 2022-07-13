@@ -87,5 +87,15 @@ Text=#Render# Options
 MeterStyle=Set.String:S | Set.OptionCat:S
 
 @includeCore=#SKINSPATH##Skin.Name#\Core\Render\#Render#.inc
+; ---------------------------------------------------------------------------- ;
+;                                    Anchor                                    ;
+; ---------------------------------------------------------------------------- ;
+
+
+[AnchorSuppli]
+Meter=String
+Container=ContentContainer
+x=r
+Y=R
 
 @includeVars=#SKINSPATH##Skin.Name#\Main\Styles\Vars\#Style#.inc
