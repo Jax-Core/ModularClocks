@@ -40,7 +40,7 @@ MeterStyle=Set.String:S | Set.OptionCat:S
 
 [Item01.Shape]
 Meter=Shape
-Leftmouseupaction=["https://github.com/Jax-Core/ModularPlayers#installing-imagemagick"]
+Leftmouseupaction=["https://jaxcore.gitbook.io/core/getting-started/additional-requisites#imagemagick"]
 MeterStyle=Item.Shape:S
 [Item01.StringIcon]
 Meter=String
