@@ -1,36 +1,35 @@
-# This is a basic workflow to help you get started with Actions
+name: "📄  Dynamic ReadME"
 
-name: CI
+env:
+  VS_WORKFLOW_TYPE: "dynamic-readme"
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  update_readme:
+    name: "Render & Update ReadME"
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - name: "📥  Fetching Repository Contents"
+        uses: actions/checkout@main
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: "💾  Github Repository Metadata"
+        uses: varunsridharan/action-repository-meta@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: "💫  Update README.md"
+        uses: "varunsridharan/action-dynamic-readme@main"
+        with:
+          GLOBAL_TEMPLATE_REPOSITORY: Jax-Core/ReadME-Template/Templates
+          commit_message: ⏩ File Rebuilt by Github Actions - Dynamic ReadME
+          files: |
+            README.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
