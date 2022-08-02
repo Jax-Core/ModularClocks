@@ -72,6 +72,8 @@ Meter=Image
 MeterStyle=RenderStyle
 [Blur]
 Meter=Image
+Leftmouseupaction=[!CommandMeasure Func "PopupImageMagick('#CURRENTSECTION#', 'BangToRun')"]
+BangToRun=[!WriteKeyValue Variables Render #CURRENTSECTION# "#Sec.SaveLocation#"][!Refresh][!UpdateMeasure Auto_Refresh:M]
 MeterStyle=RenderStyle
 ; [Bar]
 ; Meter=Image
