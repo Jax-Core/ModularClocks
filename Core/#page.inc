@@ -42,6 +42,19 @@ MeterStyle=Set.String:S | PageList.Item.Icon.String:S
 Meter=String
 Text=Style options
 MeterStyle=Set.String:S | PageList.Item.String:S
+
+[AddOns.Shape]
+Meter=Shape
+MeterStyle=PageList.Item.Shape:S
+[AddOns.Icon.String]
+Meter=String
+Text="[\xe53b]"
+MeterStyle=Set.String:S | PageList.Item.Icon.String:S
+[AddOns.String]
+Meter=String
+Text=3D Overlay
+MeterStyle=Set.String:S | PageList.Item.String:S
+
 [Render.Shape]
 Meter=Shape
 MeterStyle=PageList.Item.Shape:S
