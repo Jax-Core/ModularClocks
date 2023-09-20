@@ -1,3 +1,8 @@
+### ↗️ Click Code, then Download ZIP to download my fixed version. Extract it to your Rainmeter skins folder (Google if you don't know where that is).
+### You'll also need to install https://github.com/e2e8/rainmeter-jsonparser to your Plugins folder. Again, Google it.
+
+---
+
 <!-- START Header.mustache -->
 <br />
 <div align="center">
