@@ -1,3 +1,7 @@
+### ↗️ Click Code, then Download ZIP to download my fixed version. Extract it to your Rainmeter skins folder (Google if you don't know where that is).
+
+---
+
 <!-- START Header.mustache -->
 <br />
 <div align="center">
